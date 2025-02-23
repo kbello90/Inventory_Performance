@@ -49,7 +49,7 @@ if page == "Overview":
     # Inventory Turnover by Category
     st.subheader("Inventory Turnover by Category")
     fig, ax = plt.subplots()
-    sns.boxplot(x="Category", y="Invt TO", data=df_inventory, palette="Set2", ax=ax)
+    sns.boxplot(x="Category", y="Invt TO", data=df_inventory, hue="Category", palette="Set2", ax=ax, legend=False)
     ax.set_xlabel("Product Category")
     ax.set_ylabel("Inventory Turnover")
     ax.set_title("Distribution of Inventory Turnover by Category")
